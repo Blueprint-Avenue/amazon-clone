@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkout from "./components/Checkout";
 
 function App() {
@@ -10,16 +10,10 @@ function App() {
 			<div className="App">
 				{/* Header */}
 				<Header />
-				<Switch>
-					<Route path="/checkout" component={Checkout}>
-						{/* Checkout */}
-						<Checkout />
-					</Route>
-					<Route path="/" component={Home}>
-						{/* Home */}
-						<Home />
-					</Route>
-				</Switch>
+				<Routes>
+					<Route path="/checkout" element={<Checkout />} />
+					<Route path="/" element={<Home />} />
+				</Routes>
 			</div>
 		</Router>
 	);
