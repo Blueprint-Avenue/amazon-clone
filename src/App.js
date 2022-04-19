@@ -11,11 +11,11 @@ function App() {
 				{/* Header */}
 				<Header />
 				<Switch>
-					<Route exact={true} path="/checkout">
+					<Route path="/checkout" component={Checkout}>
 						{/* Checkout */}
 						<Checkout />
 					</Route>
-					<Route exact={true} path="/">
+					<Route path="/" component={Home}>
 						{/* Home */}
 						<Home />
 					</Route>
